@@ -106,7 +106,7 @@ WARNING
         load_bundler_cache
         build_bundler(bundle_path: "vendor/bundle", default_bundle_without: "development:test")
         post_bundler
-        create_database_yml
+        # create_database_yml
         install_binaries
         run_assets_precompile_rake_task
       end
@@ -154,7 +154,7 @@ WARNING
       gem_layer.metadata[:buildpack_version] = BUILDPACK_VERSION
       gem_layer.write
 
-      create_database_yml
+      # create_database_yml
       # TODO replace this with multibuildpack stuff? put binaries in their own layer?
       install_binaries
       run_assets_precompile_rake_task
